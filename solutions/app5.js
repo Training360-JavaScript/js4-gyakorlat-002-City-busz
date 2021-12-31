@@ -11,7 +11,7 @@ const getProductData = () => productData;
  */
 const sortProducts = (products = [{ name: '' }]) => {
     // itt dolgozz
-    return products.sort((a, b) => a.name - b.name);
+    return products.sort((a, b) => a.name.localeCompare(b.name));
 };
 
 /**
