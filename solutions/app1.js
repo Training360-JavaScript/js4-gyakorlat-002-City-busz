@@ -19,7 +19,7 @@ const getServerData = () => serverData;
  * @param {string} url a távoli erőforrás címe, ahonnan lekérjük az adatokat
  */
 const startFetch = (method = 'GET', url = '') => {
-    fetch('', {  })
+    fetch(url, { method })
         .then(response => response.json())
         .then(data => serverData = data)
         .catch(
@@ -33,5 +33,5 @@ const startFetch = (method = 'GET', url = '') => {
  */
 export {
     
-    getServerData,
+    getServerData, startFetch
 }
